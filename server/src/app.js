@@ -1,8 +1,12 @@
 const express = require("express");
 
 
-const server = express();
-server.use(express.json());
+
+const app = express();
+app.use(express.json());
+app.get("/", (req, res) => {
+    res.send("resonse sent");
+}); 
 
 
-module.exports = server;
+module.exports = app;
